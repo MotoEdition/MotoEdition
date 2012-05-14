@@ -1,8 +1,3 @@
-import java.awt.Color;
-
-import javax.swing.ButtonGroup;
-import javax.swing.ImageIcon;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -38,26 +33,15 @@ public class Home extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton("", true);
-		jRadioButton2 = new javax.swing.JRadioButton("", false);
-		jRadioButton3 = new javax.swing.JRadioButton("", false);
-		jRadioButton4 = new javax.swing.JRadioButton("", false);
-		jRadioButton5 = new javax.swing.JRadioButton("", false);
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(Color.BLACK);
+        jPanel1.setBackground(Color.black);
         jLabel1.setForeground(Color.red);
-        
-    	jLabel2.setIcon(new ImageIcon(
-				"/home/student/workspace/MotoEdition/home.jpg"));
-		jLabel2.setBackground(Color.black);
-        
-    	ButtonGroup group = new ButtonGroup();
-		group.add(jRadioButton1);
-		group.add(jRadioButton2);
-		group.add(jRadioButton3);
-		group.add(jRadioButton4);
-		group.add(jRadioButton5);
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -267,34 +251,24 @@ public class Home extends javax.swing.JFrame {
                                   
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jLabel2.setIcon(new ImageIcon(
-				"/home/student/workspace/MotoEdition/home.jpg"));
-		jLabel2.setBackground(Color.black);
-		}
+        // TODO add your handling code here:
+    }
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jLabel2.setIcon(new ImageIcon(
-				"/home/student/workspace/MotoEdition/home2.jpg"));
-		jLabel2.setBackground(Color.black);
-		}
+        // TODO add your handling code here:
+    }
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jLabel2.setIcon(new ImageIcon(
-				"/home/student/workspace/MotoEdition/home3.jpg"));
-		jLabel2.setBackground(Color.black);
-		}
+        // TODO add your handling code here:
+    }
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jLabel2.setIcon(new ImageIcon(
-				"/home/student/workspace/MotoEdition/home4.jpg"));
-		jLabel2.setBackground(Color.black);	
+        // TODO add your handling code here:
     }
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {
-    	jLabel2.setIcon(new ImageIcon(
-				"/home/student/workspace/MotoEdition/home5.jpg"));
-		jLabel2.setBackground(Color.black);	
-		}
+        // TODO add your handling code here:
+    }
 
     /**
      * @param args the command line arguments

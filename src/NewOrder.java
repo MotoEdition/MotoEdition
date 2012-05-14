@@ -316,10 +316,10 @@ public class NewOrder extends javax.swing.JFrame {
     	  
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        Home home = new Home();
-        home.setVisible(true);
-        dispose();
-    }
+		Home home = new Home();
+		home.setVisible(true);
+		dispose();
+	}
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
