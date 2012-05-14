@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Mon May 14 21:42:17 EEST 2012:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.7.1.1 - (1040133): instance a816c00e-0137-4ca8-724c-00000300cb68 
+Mon May 14 22:27:31 EEST 2012:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.7.1.1 - (1040133): instance a816c00e-0137-4cd1-dc0c-00000335a940 
 on database directory /home/student/workspace/MotoEdition/MotoEdition1  with class loader sun.misc.Launcher$AppClassLoader@17182c1 
 Loaded from file:/home/student/workspace/MotoEdition/derby.jar
 java.vendor=Sun Microsystems Inc.
