@@ -606,7 +606,7 @@ public class EditOrder extends javax.swing.JFrame {
 
 		MimeMessage message = new MimeMessage(mailSession);
 		message.setSubject("MotoEditon PitStop");
-		message.setContent("Your Motor is Ready! \n Come And Take It! \n Your Repairing Costs"  + Money  ,
+		message.setContent("Your Motor is Ready! \n Come And Take It!"    ,
 				"text/plain");
 
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(s));
