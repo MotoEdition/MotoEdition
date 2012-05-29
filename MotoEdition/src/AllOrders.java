@@ -232,7 +232,218 @@ public class AllOrders extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)                                       
     	throws SQLException {
+    	if(i==1){
     		createConnection();
+    		System.out.println(conn);
+
+    		System.out.println("Lol");
+    		jList1.setModel(new DefaultListModel());
+
+    		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
+    				ResultSet.CONCUR_UPDATABLE);
+
+    		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
+    		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
+    			System.out.println("ResultSet non-updatable.");
+    		} else {
+    			System.out.println("ResultSet updatable.");
+    		}
+
+    		while (res.next()) {
+
+    			jList1.setModel(new javax.swing.AbstractListModel() {
+    				{
+    					String[] s = new String[Orders.length + 1];
+    					for (int i = 0; i < Orders.length; i++) {
+    						s[i] = Orders[i];
+    					}
+    					s[Orders.length] = ("  " + res.getInt("ID") + ", "
+    							+ res.getString("Name1") + "  "
+    							+ res.getString("Name2") + " - "
+    							+ res.getString("Email"));
+    							
+    					Orders = s;
+
+    				}
+
+    				public int getSize() {
+    					return Orders.length;
+    				}
+
+    				public Object getElementAt(int i) {
+    					return Orders[i];
+    				}
+    			});
+
+    		}
+
+    		res.close();
+
+    		sta.close();
+    	}
+    	else if(i==2){
+    		createConnection();
+    		System.out.println(conn);
+
+    		System.out.println("Lol");
+    		jList1.setModel(new DefaultListModel());
+
+    		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
+    				ResultSet.CONCUR_UPDATABLE);
+
+    		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
+    		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
+    			System.out.println("ResultSet non-updatable.");
+    		} else {
+    			System.out.println("ResultSet updatable.");
+    		}
+
+    		while (res.next()) {
+
+    			jList1.setModel(new javax.swing.AbstractListModel() {
+    				{
+    					String[] s = new String[Orders.length + 1];
+    					for (int i = 0; i < Orders.length; i++) {
+    						s[i] = Orders[i];
+    					}
+    					s[Orders.length] = ("  " + res.getInt("ID") + ", "
+    							+ res.getString("Name1") + "  "
+    							+ res.getString("Name2") + " - "
+    							+ res.getString("Telephone"));
+    							
+    					Orders = s;
+
+    				}
+
+    				public int getSize() {
+    					return Orders.length;
+    				}
+
+    				public Object getElementAt(int i) {
+    					return Orders[i];
+    				}
+    			});
+
+    		}
+
+    		res.close();
+
+    		sta.close();
+    		
+    	}
+    	else if(i==3){
+    		
+    		createConnection();
+    		System.out.println(conn);
+
+    		System.out.println("Lol");
+    		jList1.setModel(new DefaultListModel());
+
+    		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
+    				ResultSet.CONCUR_UPDATABLE);
+
+    		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
+    		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
+    			System.out.println("ResultSet non-updatable.");
+    		} else {
+    			System.out.println("ResultSet updatable.");
+    		}
+
+    		while (res.next()) {
+
+    			jList1.setModel(new javax.swing.AbstractListModel() {
+    				{
+    					String[] s = new String[Orders.length + 1];
+    					for (int i = 0; i < Orders.length; i++) {
+    						s[i] = Orders[i];
+    					}
+    					s[Orders.length] = ("  " + res.getInt("ID") + ", "
+    							+ res.getString("Brand") + "  "
+    							+ res.getString("Model") + " - "
+    							+ res.getString("Problem") + ", "
+    							+ res.getString("Price"));
+    							
+    					Orders = s;
+
+    				}
+
+    				public int getSize() {
+    					return Orders.length;
+    				}
+
+    				public Object getElementAt(int i) {
+    					return Orders[i];
+    				}
+    			});
+
+    		}
+
+    		res.close();
+
+    		sta.close();
+    		
+    	}
+    	else  {
+    		createConnection();
+    		System.out.println(conn);
+
+    		System.out.println("Lol");
+    		jList1.setModel(new DefaultListModel());
+
+    		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
+    				ResultSet.CONCUR_UPDATABLE);
+
+    		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
+    		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
+    			System.out.println("ResultSet non-updatable.");
+    		} else {
+    			System.out.println("ResultSet updatable.");
+    		}
+
+    		while (res.next()) {
+
+    			jList1.setModel(new javax.swing.AbstractListModel() {
+    				{
+    					String[] s = new String[Orders.length + 1];
+    					for (int i = 0; i < Orders.length; i++) {
+    						s[i] = Orders[i];
+    					}
+    					s[Orders.length] = ("  " + res.getInt("ID") + ", "
+    							+ res.getString("Name1") + "  "
+    							+ res.getString("Name2") + " - "
+    							+ res.getString("Telephone") + ", "
+    							+ res.getString("Brand") + "  "
+    							+ res.getString("Model") + " - "
+    							+ res.getString("Problem") + ", "
+    							+ res.getString("Email") + ", "
+    							+ res.getString("Time") + ", "
+    							+ res.getString("Price") + ", " + res
+    							.getString("Status"));
+    					Orders = s;
+
+    				}
+
+    				public int getSize() {
+    					return Orders.length;
+    				}
+
+    				public Object getElementAt(int i) {
+    					return Orders[i];
+    				}
+    			});
+
+    		}
+
+    		res.close();
+
+    		sta.close();
+
+
+   		
+    	}
+    }
+    
+    /*		createConnection();
     		System.out.println(conn);
 
     		System.out.println("Lol");
@@ -285,7 +496,7 @@ public class AllOrders extends javax.swing.JFrame {
 
     		sta.close();
     	}                                    
-
+*/
     	private static void createConnection() {
     		try {
     			Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
@@ -296,217 +507,28 @@ public class AllOrders extends javax.swing.JFrame {
     			except.printStackTrace();
     		}
     	}
-    	
+    	int i;
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) 
     	throws SQLException {
-    		createConnection();
-    		System.out.println(conn);
-
-    		System.out.println("Lol");
-    		jList1.setModel(new DefaultListModel());
-
-    		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
-    				ResultSet.CONCUR_UPDATABLE);
-
-    		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
-    		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
-    			System.out.println("ResultSet non-updatable.");
-    		} else {
-    			System.out.println("ResultSet updatable.");
-    		}
-
-    		while (res.next()) {
-
-    			jList1.setModel(new javax.swing.AbstractListModel() {
-    				{
-    					String[] s = new String[Orders.length + 1];
-    					for (int i = 0; i < Orders.length; i++) {
-    						s[i] = Orders[i];
-    					}
-    					s[Orders.length] = ("  " + res.getInt("ID") + ", "
-    							+ res.getString("Name1") + "  "
-    							+ res.getString("Name2") + " - "
-    							+ res.getString("Email"));
-    							
-    					Orders = s;
-
-    				}
-
-    				public int getSize() {
-    					return Orders.length;
-    				}
-
-    				public Object getElementAt(int i) {
-    					return Orders[i];
-    				}
-    			});
-
-    		}
-
-    		res.close();
-
-    		sta.close();
+    		i=1;
+    		System.out.println(i);
     	}                                    
 
     	                     
 
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {
-		createConnection();
-		System.out.println(conn);
-
-		System.out.println("Lol");
-		jList1.setModel(new DefaultListModel());
-
-		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
-				ResultSet.CONCUR_UPDATABLE);
-
-		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
-		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
-			System.out.println("ResultSet non-updatable.");
-		} else {
-			System.out.println("ResultSet updatable.");
-		}
-
-		while (res.next()) {
-
-			jList1.setModel(new javax.swing.AbstractListModel() {
-				{
-					String[] s = new String[Orders.length + 1];
-					for (int i = 0; i < Orders.length; i++) {
-						s[i] = Orders[i];
-					}
-					s[Orders.length] = ("  " + res.getInt("ID") + ", "
-							+ res.getString("Name1") + "  "
-							+ res.getString("Name2") + " - "
-							+ res.getString("Telephone"));
-							
-					Orders = s;
-
-				}
-
-				public int getSize() {
-					return Orders.length;
-				}
-
-				public Object getElementAt(int i) {
-					return Orders[i];
-				}
-			});
-
-		}
-
-		res.close();
-
-		sta.close();
+	
+    	i=2;
 	}   
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {
-		createConnection();
-		System.out.println(conn);
-
-		System.out.println("Lol");
-		jList1.setModel(new DefaultListModel());
-
-		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
-				ResultSet.CONCUR_UPDATABLE);
-
-		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
-		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
-			System.out.println("ResultSet non-updatable.");
-		} else {
-			System.out.println("ResultSet updatable.");
-		}
-
-		while (res.next()) {
-
-			jList1.setModel(new javax.swing.AbstractListModel() {
-				{
-					String[] s = new String[Orders.length + 1];
-					for (int i = 0; i < Orders.length; i++) {
-						s[i] = Orders[i];
-					}
-					s[Orders.length] = ("  " + res.getInt("ID") + ", "
-							+ res.getString("Brand") + "  "
-							+ res.getString("Model") + " - "
-							+ res.getString("Problem") + ", "
-							+ res.getString("Price"));
-							
-					Orders = s;
-
-				}
-
-				public int getSize() {
-					return Orders.length;
-				}
-
-				public Object getElementAt(int i) {
-					return Orders[i];
-				}
-			});
-
-		}
-
-		res.close();
-
-		sta.close();
+	
+    	i=3;
 	}   
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {
-		createConnection();
-		System.out.println(conn);
-
-		System.out.println("Lol");
-		jList1.setModel(new DefaultListModel());
-
-		Statement sta = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,
-				ResultSet.CONCUR_UPDATABLE);
-
-		final ResultSet res = sta.executeQuery("SELECT * FROM Orders3");
-		if (res.getConcurrency() == ResultSet.CONCUR_READ_ONLY) {
-			System.out.println("ResultSet non-updatable.");
-		} else {
-			System.out.println("ResultSet updatable.");
-		}
-
-		while (res.next()) {
-
-			jList1.setModel(new javax.swing.AbstractListModel() {
-				{
-					String[] s = new String[Orders.length + 1];
-					for (int i = 0; i < Orders.length; i++) {
-						s[i] = Orders[i];
-					}
-					s[Orders.length] = ("  " + res.getInt("ID") + ", "
-							+ res.getString("Name1") + "  "
-							+ res.getString("Name2") + " - "
-							+ res.getString("Telephone") + ", "
-							+ res.getString("Brand") + "  "
-							+ res.getString("Model") + " - "
-							+ res.getString("Problem") + ", "
-							+ res.getString("Email") + ", "
-							+ res.getString("Time") + ", "
-							+ res.getString("Price") + ", " + res
-							.getString("Status"));
-					Orders = s;
-
-				}
-
-				public int getSize() {
-					return Orders.length;
-				}
-
-				public Object getElementAt(int i) {
-					return Orders[i];
-				}
-			});
-
-		}
-
-		res.close();
-
-		sta.close();
-	}   
+    }
 
     /**
      * @param args the command line arguments
